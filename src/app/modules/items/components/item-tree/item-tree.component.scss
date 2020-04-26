@@ -1,0 +1,15 @@
+@import '../../../../../styles/variables';
+
+:host {
+  display: block;
+}
+
+.ItemTree {
+  &__Element {
+    margin-bottom: $gutter;
+  }
+
+  &__ChildTree {
+    padding-left: $gutter;
+  }
+}

@@ -1,0 +1,30 @@
+@import '../../../../../styles/variables';
+
+.SearchInput {
+  background-color: $light-background-color;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  &__Input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: ($gutter / 2) $gutter;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    &::placeholder {
+      color: map_get($text-color, 'light');
+      opacity: 0.5;
+    }
+  }
+
+  &__Icon {
+    padding-right: $gutter;
+    position: absolute;
+    right: 0;
+  }
+}

@@ -1,0 +1,20 @@
+<div
+  class="SideBar"
+  [@openClose]="
+    (isBelowSm$ | async) === false ? 'open' : (isSideBarOpen$ | async) ? 'open' : 'closed'
+  "
+>
+  <div class="SideBar__Container">
+    <app-user-organization-badge></app-user-organization-badge>
+    <nav class="SideBar__Navigation">
+      <ul class="SideBar__NavigationList">
+        <!-- Normally I'd run a ngFor loop here and keep the menu config in an Array/Object -->
+        <li class="SideBar__NavigationListItem">Marketing Plan</li>
+        <li class="SideBar__NavigationListItem">Dashboard</li>
+        <li class="SideBar__NavigationListItem">My Ads</li>
+        <li class="SideBar__NavigationListItem">Analytics</li>
+        <li class="SideBar__NavigationListItem">Cobiro Store</li>
+      </ul>
+    </nav>
+  </div>
+</div>

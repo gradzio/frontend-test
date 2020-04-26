@@ -1,0 +1,23 @@
+<div class="container TopBar">
+  <div class="TopBar__LogoAndHamburger">
+    <button
+      app-button
+      class="TopBar__Hamburger"
+      (click)="toggleSideBar()"
+      type="button"
+      buttonType="stroked"
+    >
+      <!--    Normally I'd use icons from Material Design / Bootstrap or import the icon font from materialdesignicons.com but-->
+      <!--    for this project it doesn't make sense to import the whole font library so I'm using single SVGs instead-->
+      <img alt="Menu Icon" src="assets/images/icons/menu.svg" />
+    </button>
+    <div class="TopBar__Logo">
+      <img alt="Cobiro" src="assets/images/logo.svg" class="TopBar__LogoImage" />
+    </div>
+  </div>
+
+  <button app-button type="button" class="TopBar__Dropdown">
+    <app-user-badge></app-user-badge>
+    <img class="TopBar__DropdownIcon" src="assets/images/icons/chevron-down.svg" />
+  </button>
+</div>

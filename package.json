@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~9.0.7",
     "@angular/platform-browser-dynamic": "~9.0.7",
     "@angular/router": "~9.0.7",
+    "normalize.scss": "^0.1.0",
     "rxjs": "^6.5.4",
     "tslib": "^1.11.0",
     "zone.js": "~0.10.2"
@@ -43,6 +44,7 @@
     "karma-jasmine": "~3.1.1",
     "karma-jasmine-html-reporter": "^1.5.2",
     "node-json-db": "^1.0.3",
+    "prettier": "^2.0.5",
     "protractor": "^5.4.3",
     "ts-node": "~8.6.2",
     "tslint": "^6.1.0",

@@ -1,0 +1,9 @@
+<div class="UserOrganizationBadge" *ngIf="user$ | async; let user">
+  <!-- normally we'd get that image src from API based on the organization id w-->
+  <img
+    class="UserOrganizationBadge__Image"
+    src="assets/images/organization.png"
+    [alt]="user.organization.name"
+  />
+  <p class="UserOrganizationBadge__Name">{{ user.organization.url }}</p>
+</div>

@@ -1,0 +1,9 @@
+<div class="UserBadge" *ngIf="user$ | async; let user">
+  <!-- normally we'd get that image src from API based on the user id -->
+  <img
+    class="UserBadge__Image"
+    src="assets/images/morten.png"
+    [alt]="user.firstName + ' ' + user.lastName"
+  />
+  <span class="UserBadge__Name">{{ user.firstName }}</span>
+</div>

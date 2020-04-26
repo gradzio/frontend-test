@@ -1,0 +1,19 @@
+<app-search-input (inputChange)="getItems($event)"></app-search-input>
+
+<ng-container *ngIf="items$ | async; let items; else: itemsFetchError ? error : loading">
+  <ng-container *ngIf="items && items.length > 0; else noResults">
+    <app-item-tree class="ItemList__Tree" [items]="items"></app-item-tree>
+  </ng-container>
+</ng-container>
+
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>
+
+<ng-template #noResults>
+  <p>No items found</p>
+</ng-template>
+
+<ng-template #error>
+  <p>Sorry, it seems that an error occurred</p>
+</ng-template>

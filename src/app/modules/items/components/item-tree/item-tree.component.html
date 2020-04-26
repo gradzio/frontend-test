@@ -1,0 +1,6 @@
+<ng-container *ngFor="let item of items">
+  <app-item-tree-element class="ItemTree__Element" [item]="item"></app-item-tree-element>
+  <ng-container *ngIf="item.children && item.children.length > 0">
+    <app-item-tree class="ItemTree__ChildTree" [items]="item.children"></app-item-tree>
+  </ng-container>
+</ng-container>

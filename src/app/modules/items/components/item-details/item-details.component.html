@@ -1,0 +1,16 @@
+<ng-container *ngIf="item$ | async; let item; else: itemFetchError ? error : loading">
+  <h1>{{ item.title }}</h1>
+</ng-container>
+<a app-button buttonType="flat" routerLink="/">Go back</a>
+
+<ng-template #loading>
+  <p>Loading...</p>
+</ng-template>
+
+<ng-template #error>
+  <p>
+    {{
+      itemFetchError?.status === 404 ? 'Item not found' : 'Sorry, it seems that an error occurred'
+    }}
+  </p>
+</ng-template>

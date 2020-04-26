@@ -1,0 +1,27 @@
+@import '../../../../../styles/variables';
+
+:host {
+  background-color: transparent;
+  border: none;
+  padding: ($gutter / 2) $gutter;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $border-radius;
+  cursor: pointer;
+  &:active {
+    opacity: 0.6;
+  }
+  &[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  &.flat {
+    background-color: $accent-color;
+    color: $light-background-color;
+  }
+  &.wide {
+    padding: ($gutter / 2) ($gutter * 2);
+  }
+}

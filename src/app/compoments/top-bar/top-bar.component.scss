@@ -1,0 +1,43 @@
+@import '../../../styles/variables';
+
+.TopBar {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: $light-background-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $border-color;
+  height: 64px;
+
+  &__LogoAndHamburger {
+    display: flex;
+  }
+
+  &__Logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__LogoImage {
+    height: 16px;
+  }
+
+  &__Hamburger {
+    margin-right: 10px;
+    display: none;
+    margin-left: $gutter * -1;
+    @media (max-width: $sm) {
+      display: inherit;
+    }
+  }
+
+  &__Dropdown {
+    margin-right: $gutter * -1;
+  }
+
+  &__DropdownIcon {
+    margin-left: 10px;
+  }
+}
